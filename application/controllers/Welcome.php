@@ -32,8 +32,10 @@ class Welcome extends CI_Controller {
     }
 
     public function events() {
+        $this->load->model('Events');
+        $this->data['daten'] = $this->Events->getEvents();
         $this->load->view('header');
-        $this->load->view('body/events');
+        $this->load->view('body/events', $this->data);
         $this->load->view('footer');
     }
 

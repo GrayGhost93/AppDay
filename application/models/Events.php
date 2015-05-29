@@ -12,17 +12,17 @@ class Events extends CI_Model {
 	}
 	
 	public function getEvents() {
-		$sql = "SELECT id FROM events GROUP BY tag";
 		$vordaten = $this->db->get('events')->result_array();
 		$rückgabe = array();
 		foreach ($vordaten as $r) {
 			$sql2 = "SELECT * FROM events WHERE tag = ?";
-			$erg = $this->db->query($sql, array($r['tag']))->result_array();
-			
-			$rückgabe[$r['tag']] = array();
+			$erg = $this->db->query($sql2, array($r['tag']))->result_array();
+
+            $zuarray = array();
 			foreach ($erg as $r2) {
-				$rückgabe[$r['tag']] = $r2;
+                $zuarray[] = $r2;
 			}
+            $rückgabe[$r['tag']] = $zuarray;
 		}
 		return $rückgabe;
 	}

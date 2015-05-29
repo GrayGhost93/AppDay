@@ -10,14 +10,14 @@
 
           <ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
           <?php
-            foreach ($daten as $r) {
-                print '<li data-role="list-divider">'.$r['tag'].'<span class="ui-li-count">'.$r['anzahl'].'</span></li>';
-                foreach ($r['veranstaltungen'] as $v) {
+            foreach ($daten as $r => $value) {
+                print '<li data-role="list-divider">'.$r.'<span class="ui-li-count">genug</span></li>';
+                foreach ($value as $v) {
                     print '<li>';
-                    print '<a href="'.site_url('event/show').'/'.$v['id'];
+                    print '<a href="'.site_url('event/show').'/'.$v['id'].'">';
                     print '<h2>'.$v['eventname'].'</h2>';
-                    print '<p>'.$v['eventbeschreibung'].'</p>';
-                    print '<p class="ui-li-aside"><strong>'.$v['zeitpunkt'].'</strong> Uhr</p>';
+                    print '<p>'.$v['beschreibung'].'</p>';
+                    print '<p class="ui-li-aside"><strong>'.$v['uhrzeit'].'</strong> Uhr</p>';
                     print '</a>';
                     print '</li>';
                 }
