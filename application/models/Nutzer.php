@@ -17,7 +17,18 @@ class Nutzer extends CI_Model {
 			return "true";
 		}
 		else {return "false";}	
+	}	
+	
+	public function logout() {
+		return $this->session->sess_destroy();
 	}
 	
+	public function addUser($username, $passwort) {
+		return $this->db->insert('user', array('user' => $username, 'passwort' => $passwort));
+	}
+	
+	public function delUser($userid) {
+		return $this->db->delete('user', array('id' => $userid)); 
+	}
 }
 ?>
