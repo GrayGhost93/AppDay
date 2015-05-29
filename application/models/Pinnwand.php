@@ -6,10 +6,10 @@ class Pinnwand extends CI_Model {
     }
 
     public function getPosts() {
-        $vordaten = $this->db->get('pinnwand')->result_array();
+        $vordaten = $this->db->order_by('tag DESC')->get('pinnwand')->result_array();
         $rückgabe = array();
         foreach ($vordaten as $r) {
-            $sql2 = "SELECT * FROM pinnwand WHERE tag = ?";
+            $sql2 = "SELECT * FROM pinnwand WHERE tag = ? ORDER BY uhrzeit";
             $erg = $this->db->query($sql2, array($r['tag']))->result_array();
 
             $zuarray = array();
