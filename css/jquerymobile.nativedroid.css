@@ -68,7 +68,6 @@ width: 91px;
 .ui-btn, label.ui-btn,
 .ui-page-theme-b a, html .ui-bar-b a, html .ui-page-theme-b a, html body .ui-group-theme-b a {
 	font-family: "Roboto", sans-serif;
-	font-weight: 300;
 }
 
 .ui-content {
@@ -344,6 +343,7 @@ img.ui-li-icon {
 .ui-content h1,.ui-content h2,.ui-content h3,.ui-content h4,.ui-content h5,.ui-content h6,.ui-content p {
 	font-weight: 100;
 	margin: 7px 0px 7px 0px;
+	white-space: normal;
 }
 
 .ui-collapsible h1.ui-collapsible-heading, .ui-collapsible h2.ui-collapsible-heading, .ui-collapsible h3.ui-collapsible-heading, .ui-collapsible h4.ui-collapsible-heading, .ui-collapsible h5.ui-collapsible-heading, .ui-collapsible h6.ui-collapsible-heading {
@@ -920,20 +920,20 @@ progress  {
 	top: 0px;
 	left: -100%;
 	position: relative;
-	-webkit-animation: slideFromLeft 1.5s 1;
+	-webkit-animation: slideFromLeft 0.5s 1;
 	-webkit-animation-fill-mode: forwards;
-	-moz-animation: slideFromLeft 1.5s 1;
+	-moz-animation: slideFromLeft 0.5s 1;
 	-moz-animation-fill-mode: forwards;
-	animation: slideFromLeft 1.5s 1;
+	animation: slideFromLeft 0.5s 1;
 	animation-fill-mode: forwards;
 }
 
 .nativeDroidCards > li:nth-child(even) {
-	-webkit-animation: slideFromRight 1.5s 1;
+	-webkit-animation: slideFromRight 0.5s 1;
 	-webkit-animation-fill-mode: forwards;
-	-moz-animation: slideFromRight 1.5s 1;
+	-moz-animation: slideFromRight 0.5s 1;
 	-moz-animation-fill-mode: forwards;
-	animation: slideFromRight 1.5s 1;
+	animation: slideFromRight 0.5s 1;
 	animation-fill-mode: forwards;
 }
 

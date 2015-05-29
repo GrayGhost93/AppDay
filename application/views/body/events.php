@@ -15,7 +15,16 @@
                 $monat = substr($r,5,2);
                 $jahr = substr($r,0,4);
                 $datum = $tag.'.'.$monat.'.'.$jahr;
-                print '<li data-role="list-divider">'.$datum.'<span class="ui-li-count">genug</span></li>';
+                $counter = 0;
+                foreach ($value as $keks) {
+                    $counter++;
+                }
+
+                if ($counter == 1){
+                    print '<li data-role="list-divider">' . $datum . '<span class="ui-li-count">' . $counter . ' Event</span></li>';
+                }else {
+                    print '<li data-role="list-divider">' . $datum . '<span class="ui-li-count">' . $counter . ' Events</span></li>';
+                }
                 foreach ($value as $v) {
                     $anzeigezeit = substr($v['uhrzeit'], 0 ,-3 );
                     print '<li>';

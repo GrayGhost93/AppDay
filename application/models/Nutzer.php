@@ -35,7 +35,7 @@ class Nutzer extends CI_Model {
 		$sql = "SELECT * FROM user";
 		$result = $this->db->query($sql);
 		$user = $result->result_array();
-
+		return $user;
 	}
 }
 ?>

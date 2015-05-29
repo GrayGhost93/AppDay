@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
         $this->load->model('News');
         $this->data['news'] = $this->News->getNewsOrdered();
 
-
+        $this->load->view('header');
         $this->load->view('body/news', $this->data);
         $this->load->view('footer');
     }
@@ -72,6 +72,12 @@ class Welcome extends CI_Controller {
     public function kontakt() {
         $this->load->view('header');
         $this->load->view('body/kontakt');
+        $this->load->view('footer');
+    }
+    
+    public function faq() {
+        $this->load->view('header');
+        $this->load->view('body/faq');
         $this->load->view('footer');
     }
 

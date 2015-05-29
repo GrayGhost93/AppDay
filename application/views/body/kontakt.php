@@ -7,7 +7,7 @@
         </div>
 
         <div data-role="content">
-            <ul data-nativedroid-plugin='cards'>
+            <ul data-nativedroid-plugin='cards' class='nativeDroidCards'>
                 <li data-cards-type='text'>
                     <h1>Fachschaftsrat Informatik</h1>
                     <p> Albert-Einstein-Straße 22</br>
@@ -21,6 +21,7 @@
                     <h1>Institut für Informatik</h1>
                     <p> Albert-Einstein-Straße 22</br>
                         18059 Rostock</br>
+                        <div style="color: green; background-color: green; width:100px; height: 100px;"></div>
                         Telefon: +49 381 498-7451</br>
                         <a href="mailto:institut@informatik.uni-rostock.de">institut@informatik.uni-rostock.de</a></p>
                     <a href="https://www.informatik.uni-rostock.de" target="_blank">Webseite des Instituts für Informatik</a></p>
