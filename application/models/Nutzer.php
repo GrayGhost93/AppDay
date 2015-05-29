@@ -12,6 +12,7 @@ class Nutzer extends CI_Model {
 		$result = $this->db->query($sql, array($user, $passwort));
 		$user = $result->result_array();
 		
+		print_r($result->num_rows());
 		if( $result->num_rows() == 1 ){
 			$this->session->set_userdata(array('eingeloggt' => true, 'id' => $user[0]['id']));
 			return "true";
