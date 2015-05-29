@@ -11,26 +11,29 @@
 			<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
 	            <li data-role="list-divider">Wichtiges</li>
 	            <li>
-					<a href="panels.html" data-ajax="false"><i class='fa fa-tasks'></i>News</a>
+					<a href="<?php print site_url('welcome/news'); ?>" data-ajax="false"><i class='fa fa-tasks'></i>News</a>
 	            </li>
 	            <li>
-					<a href="text.html" data-ajax="false"><i class='fa fa-align-left'></i>Wichtige Orte</a>
+					<a href="<?php print site_url('welcome/locations'); ?>" data-ajax="false"><i class='fa fa-align-left'></i>Wichtige Orte</a>
 	            </li>
 	            <li>
-					<a href="headerfooter.html" data-ajax="false"><i class='fa fa-legal'></i>G&auml;stebuch</a>
+					<a href="<?php print site_url('welcome/gb'); ?>" data-ajax="false"><i class='fa fa-legal'></i>G&auml;stebuch</a>
 	            </li>
 	            <li>
-					<a href="tables.html" data-ajax="false"><i class='fa fa-table'></i>Events</a>
+					<a href="<?php print site_url('welcome/events'); ?>" data-ajax="false"><i class='fa fa-table'></i>Events</a>
 	            </li>
 	            <li>
-					<a href="dialogsnpopups.html" data-ajax="false"><i class='fa fa-external-link'></i>Wichtige Links</a>
+					<a href="<?php print site_url('welcome/links'); ?>" data-ajax="false"><i class='fa fa-external-link'></i>Wichtige Links</a>
 	            </li>
-	            <li data-role="list-divider">Sonstiges</li>
+	            <li data-role="list-divider">Information</li>
 	            <li>
-					<a href="autocomplete.html" data-ajax="false"><i class='fa fa-filter'></i>FAQ / Tipps &amp; Tricks</a>
+					<a href="<?php print site_url('welcome/faq'); ?>" data-ajax="false"><i class='fa fa-filter'></i>FAQ / Tipps &amp; Tricks</a>
 	            </li>
 	            <li>
-					<a href="collapsible.html" data-ajax="false"><i class='fa fa-chevron-up'></i>Kontakt</a>
+					<a href="<?php print site_url('welcome/contact'); ?>" data-ajax="false"><i class='fa fa-chevron-up'></i>Kontakt</a>
+	            </li>
+	            <li>
+					<a href="<?php print site_url('welcome/login'); ?>" data-ajax="false"><i class='fa fa-chevron-up'></i>Login</a>
 	            </li>
 	        </ul>
 	        
