@@ -33,7 +33,7 @@
 					<a href="<?php print site_url('welcome/kontakt'); ?>" data-ajax="false"><i class='fa fa-users'></i>Kontakt</a>
 	            </li>
 	            <li>
-					<a href="<?php print site_url('welcome/login'); ?>" data-ajax="false"><i class='fa fa-toggle-up'></i>Login</a>
+					<a href="<?php print site_url('welcome/login'); ?>" data-ajax="false"><i class='fa fa-sign-in'></i>Login</a>
 	            </li>
 	        </ul>
 	        

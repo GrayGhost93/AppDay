@@ -22,7 +22,7 @@
                     //print '<a href="'.site_url('event/show').'/'.$v['id'].'">';
                     print '<h1>'.$r['titel'].'</h1>';
                     print '<p>'.$r['inhalt'].'</p>';
-                    print '<p class="ui-li-aside"><strong>'.$datum.'</strong></p>';
+                    //print '<p class="ui-li-aside"><strong>'.$datum.'</strong></p>';
                     //print '</a>';
                     print '</li>';
                 }

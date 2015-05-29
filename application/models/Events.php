@@ -26,7 +26,7 @@ class Events extends CI_Model {
 	}
 
     public function getEventSpecial($eid) {
-        return $this->db->select('*')->from('events')->join('orte', 'events.ort=orte.id')->get()->result_array();
+        return $this->db->select('*')->from('events')->join('orte', 'events.ort=orte.id')->where('events.id', $eid)->get()->result_array();
     }
 }
 

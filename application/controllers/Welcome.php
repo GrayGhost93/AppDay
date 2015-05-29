@@ -76,8 +76,19 @@ class Welcome extends CI_Controller {
     }
 
     public function pinnwand() {
+        $this->load->model('Pinnwand');
+        $this->data['daten'] = $this->Pinnwand->getPosts();
         $this->load->view('header');
-        $this->load->view('body/pinnwand');
+        $this->load->view('body/pinnwand', $this->data);
         $this->load->view('footer');
+    }
+
+    public function postIt() {
+        $name = $_POST['name'];
+        $nachricht = $_POST['nachricht'];
+
+        $this->load->model('Pinnwand');
+        $this->Pinnwand->addPost($nachricht, date("Y.m.D"), date("H:i:s"), $name);
+        header("Location: ".site_url('welcome/pinnwand'));
     }
 }

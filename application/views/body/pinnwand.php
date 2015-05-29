@@ -1,31 +1,21 @@
 <div data-role="page" data-theme='b'>
     <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-        <a href="index.html" data-ajax="false"><i class='fa fa-bars'></i></a>
+        <a href="<?php print site_url('welcome'); ?>" data-ajax="false"><i class='fa fa-bars'></i></a>
         <h1>Form Elements</h1>
     </div>
-    <div data-role="content"><form>
+    <div data-role="content"><form action="<?php print site_url('welcome/postIt'); ?>" method="POST">
             <ul data-role="listview" data-inset="true">
                 <li data-role="fieldcontain">
                     <label for="name2b">Name:</label>
-                    <input type="text" name="name2" id="name2b" value="" data-clear-btn="true" placeholder="Gib hier deinen Namen ein...">
+                    <input type="text" name="name" id="name2b" value="" data-clear-btn="true" placeholder="Gib hier deinen Namen ein...">
                 </li>
                 <li data-role="fieldcontain">
                     <label for="name2b">Nachricht:</label>
-                    <input type="text" name="name2" id="name2b" value="" data-clear-btn="true" placeholder="Meine Nachricht...">
+                    <input type="text" name="nachricht" id="name2b" value="" data-clear-btn="true" placeholder="Meine Nachricht...">
                 </li>
             </ul>
+            <button type="submit" data-inline='true'><i class='lIcon fa fa-check'></i>Submit</button>
         </form>
-    </div>
-</div>
-
-<div data-role="page" data-theme='b'>
-    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-        <a href="<?php print site_url('welcome'); ?>" data-ajax="false"><i class='fa fa-bars'></i></a>
-        <h1>Pinnwand</h1>
-    </div>
-
-    <div data-role="content">
-
         <ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
             <?php
             foreach ($daten as $r => $value) {
