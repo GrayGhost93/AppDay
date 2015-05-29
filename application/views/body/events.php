@@ -19,7 +19,7 @@
                 foreach ($value as $v) {
                     $anzeigezeit = substr($v['uhrzeit'], 0 ,-3 );
                     print '<li>';
-                    print '<a href="'.site_url('event/show').'/'.$v['id'].'">';
+                    print '<a href="'.site_url('welcome/eventspecial').'/'.$v['id'].'">';
                     print '<h2>'.$v['eventname'].'</h2>';
                     print '<p>'.$v['beschreibung'].'</p>';
                     print '<p class="ui-li-aside"><strong>'.$anzeigezeit.'</strong> Uhr</p>';

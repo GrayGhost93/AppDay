@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 
     <script src="<?php print base_url().'js/nativedroid.script.js'; ?>" type="text/javascript"></script>
-    <link href="<?php print base_url().'css/jquerymobile.nativedroid.css'; ?>"  id='jQMnDTheme' type="text/css" rel="stylesheet" />
+    <link href="<?php print base_url().'css/jquerymobile.nativedroid.css'; ?>" type="text/css" rel="stylesheet" />
     <!-- nativeDroid: Light/Dark -->
     <link href="<?php print base_url().'css/jquerymobile.nativedroid.dark.css'; ?>"  id='jQMnDTheme' type="text/css" rel="stylesheet" />
     <!-- nativeDroid: Color Schemes -->
@@ -24,5 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- jQuery / jQueryMobile Scripts -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Extras for: Cards.html -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 </head>
 <body>

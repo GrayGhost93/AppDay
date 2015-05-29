@@ -1,3 +1,5 @@
+<div id='map-canvas'></div>
+
 <div data-role="page" data-theme='b'>
 
 
@@ -8,21 +10,26 @@
 
     <div data-role="content">
 
-        <ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
+        <ul data-nativedroid-plugin='cards'>
             <?php
-            foreach ($news as $r) {
-                print '<li data-role="list-divider"></li>';
-                    print '<li>';
+                foreach ($news as $r) {
+                    $tag = substr($r['datum'],8,2);
+                    $monat = substr($r['datum'],5,2);
+                    $jahr = substr($r['datum'],0,4);
+                    $datum = $tag.'.'.$monat.'.'.$jahr;
+
+                    print "<li data-cards-type='text'>";
                     //print '<a href="'.site_url('event/show').'/'.$v['id'].'">';
-                    print '<h2>'.$r['titel'].'</h2>';
+                    print '<h1>'.$r['titel'].'</h1>';
                     print '<p>'.$r['inhalt'].'</p>';
-                    print '<p class="ui-li-aside"><strong>'.$r['zeit'].'</strong></p>';
+                    print '<p class="ui-li-aside"><strong>'.$datum.'</strong></p>';
                     //print '</a>';
                     print '</li>';
                 }
-            }
             ?>
+
         </ul>
     </div>
 
 </div>
+

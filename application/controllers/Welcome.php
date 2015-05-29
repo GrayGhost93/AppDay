@@ -60,9 +60,24 @@ class Welcome extends CI_Controller {
         $this->load->view('footer');
     }
 
+    public function eventspecial($eid) {
+        $this->load->model('Events');
+        $this->data['event'] = $this->Events->getEventSpecial($eid);
+
+        $this->load->view('header');
+        $this->load->view('body/eventspecialpage', $this->data);
+        $this->load->view('footer');
+    }
+
     public function kontakt() {
         $this->load->view('header');
         $this->load->view('body/kontakt');
+        $this->load->view('footer');
+    }
+
+    public function pinnwand() {
+        $this->load->view('header');
+        $this->load->view('body/pinnwand');
         $this->load->view('footer');
     }
 }
