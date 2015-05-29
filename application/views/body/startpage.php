@@ -3,7 +3,7 @@
 
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
             <h1>ErstiHilfe</h1>
-            <a href="http://unilokal.de/" data-ajax='false'><i class='fa fa-android'></i></a>
+            <a href="http://unilokal.de/" data-ajax='false'><i class='fa fa-medkit'></i></a>
         </div>
         
         <div data-role="content">   
@@ -30,7 +30,7 @@
 					<a href="<?php print site_url('welcome/faq'); ?>" data-ajax="false"><i class='fa fa-star'></i>FAQ / Tipps & Tricks</a>
 	            </li>
 	            <li>
-					<a href="<?php print site_url('welcome/contact'); ?>" data-ajax="false"><i class='fa fa-users'></i>Kontakt</a>
+					<a href="<?php print site_url('welcome/kontakt'); ?>" data-ajax="false"><i class='fa fa-users'></i>Kontakt</a>
 	            </li>
 	            <li>
 					<a href="<?php print site_url('welcome/login'); ?>" data-ajax="false"><i class='fa fa-toggle-up'></i>Login</a>
