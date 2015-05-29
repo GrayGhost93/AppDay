@@ -7,7 +7,7 @@ class Pinnwand extends CI_Model {
 
     public function getPosts() {
         $vordaten = $this->db->get('pinnwand')->result_array();
-        $rückgabe = array();
+        $rÃ¼ckgabe = array();
         foreach ($vordaten as $r) {
             $sql2 = "SELECT * FROM pinnwand WHERE tag = ?";
             $erg = $this->db->query($sql2, array($r['tag']))->result_array();
@@ -16,9 +16,9 @@ class Pinnwand extends CI_Model {
             foreach ($erg as $r2) {
                 $zuarray[] = $r2;
             }
-            $rückgabe[$r['tag']] = $zuarray;
+            $rÃ¼ckgabe[$r['tag']] = $zuarray;
         }
-        return $rückgabe;
+        return $rÃ¼ckgabe;
     }
 }
 ?>

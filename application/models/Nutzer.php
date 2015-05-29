@@ -30,5 +30,12 @@ class Nutzer extends CI_Model {
 	public function delUser($userid) {
 		return $this->db->delete('user', array('id' => $userid)); 
 	}
+	
+	public function showUser() {
+		$sql = "SELECT * FROM user";
+		$result = $this->db->query($sql);
+		$user = $result->result_array();
+
+	}
 }
 ?>

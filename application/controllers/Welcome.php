@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
         $this->load->model('News');
         $this->data['news'] = $this->News->getNewsOrdered();
 
-        $this->load->view('header');
+
         $this->load->view('body/news', $this->data);
         $this->load->view('footer');
     }
@@ -88,7 +88,7 @@ class Welcome extends CI_Controller {
         $nachricht = $_POST['nachricht'];
 
         $this->load->model('Pinnwand');
-        $this->Pinnwand->addPost($nachricht, date("Y.m.D"), date("H:i:s"), $name);
+        $this->Pinnwand->addPost($nachricht, date("Y.m.d"), date("H:i:s"), $name);
         header("Location: ".site_url('welcome/pinnwand'));
     }
 }

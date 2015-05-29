@@ -14,7 +14,7 @@
                     <input type="text" name="nachricht" id="name2b" value="" data-clear-btn="true" placeholder="Meine Nachricht...">
                 </li>
             </ul>
-            <button type="submit" data-inline='true'><i class='lIcon fa fa-check'></i>Submit</button>
+            <button type="submit" data-inline='true'><i class='lIcon fa fa-check'></i>Posten</button>
         </form>
         <ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
             <?php
