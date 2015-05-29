@@ -1,10 +1,8 @@
 <?php
 
 class Events extends CI_Model {
-    public function addEvent($eventname, $zeit, $beschreibung, $ort) {
-        return $this->db->insert(	'events', array('eventname' => $eventname, 'zeitpunkt' => $zeitpunkt, 
-        							'beschreibung' => $beschreibung, 'ort' => $ort));
-
+    public function addEvent($eventname, $zeit, $tag, $beschreibung, $ort) {
+        return $this->db->insert('events', array('eventname' => $eventname, 'uhrzeit' => $zeit, 'beschreibung' => $beschreibung, 'ort' => $ort, 'tag' => $tag));
     }
     
 	public function delEvent($userid) {
@@ -26,6 +24,10 @@ class Events extends CI_Model {
 		}
 		return $rückgabe;
 	}
+
+    public function getEventSpecial($eid) {
+        return $this->db->select('*')->from('events')->join('orte', 'events.ort=orte.id')->get()->result_array();
+    }
 }
 
 ?>

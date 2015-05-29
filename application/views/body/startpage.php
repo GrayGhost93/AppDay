@@ -17,7 +17,7 @@
 					<a href="<?php print site_url('welcome/locations'); ?>" data-ajax="false"><i class='fa fa-street-view'></i>Wichtige Orte</a>
 	            </li>
 	            <li>
-					<a href="<?php print site_url('welcome/gb'); ?>" data-ajax="false"><i class='fa fa-book'></i>Gästebuch</a>
+					<a href="<?php print site_url('welcome/pinnwand'); ?>" data-ajax="false"><i class='fa fa-book'></i>Pinnwand</a>
 	            </li>
 	            <li>
 					<a href="<?php print site_url('welcome/events'); ?>" data-ajax="false"><i class='fa fa-calendar'></i>Events</a>

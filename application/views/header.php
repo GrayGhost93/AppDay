@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- nativeDroid: Light/Dark -->
     <link href="<?php print base_url().'css/jquerymobile.nativedroid.dark.css'; ?>"  id='jQMnDTheme' type="text/css" rel="stylesheet" />
     <!-- nativeDroid: Color Schemes -->
-    <link href="<?php print base_url().'css/jquerymobile.nativedroid.color.yellow.css'; ?>" id='jQMnDColor' type="text/css" rel="stylesheet"/>
+    <link href="<?php print base_url().'css/jquerymobile.nativedroid.color.blue.css'; ?>" id='jQMnDColor' type="text/css" rel="stylesheet"/>
 
 
     <!-- jQuery / jQueryMobile Scripts -->
