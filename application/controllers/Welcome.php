@@ -43,8 +43,28 @@ class Welcome extends CI_Controller {
     }
 
     public function locations() {
+        $this->load->model('Orte');
+        $this->data['campi'] = $this->Orte->getCampi();
         $this->load->view('header');
-        $this->load->view('body/locations');
+        $this->load->view('body/locations', $this->data);
+        $this->load->view('footer');
+    }
+
+    public function locationscampi() {
+        $campus = $_GET['campus'];
+        $this->load->model('Orte');
+        $this->data['orte'] = $this->Orte->getOrteByCampus($campus);
+        $this->load->view('header');
+        $this->load->view('body/locations_campus', $this->data);
+        $this->load->view('footer');
+    }
+
+    public function locationsspecial($id) {
+        $this->load->model('Orte');
+        $this->data['value'] = $this->Orte->getInfoByOrt($id);
+
+        $this->load->view('header');
+        $this->load->view('body/locationsspecial', $this->data);
         $this->load->view('footer');
     }
 
@@ -96,5 +116,11 @@ class Welcome extends CI_Controller {
         $this->load->model('Pinnwand');
         $this->Pinnwand->addPost($nachricht, date("Y.m.d"), date("H:i:s"), $name);
         header("Location: ".site_url('welcome/pinnwand'));
+    }
+
+    public function impressum() {
+        $this->load->view('header');
+        $this->load->view('body/impressum');
+        $this->load->view('footer');
     }
 }

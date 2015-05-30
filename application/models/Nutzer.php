@@ -22,11 +22,11 @@ class Nutzer extends CI_Model {
 	public function logout() {
 		return $this->session->sess_destroy();
 	}
-	
-	public function addUser($username, $passwort) {
-		return $this->db->insert('user', array('user' => $username, 'passwort' => $passwort));
-	}
-	
+
+    public function addUser($username, $passwort) {
+        return $this->db->insert('user', array('user' => $username, 'passwort' => $this->sha256($passwort)));
+    }
+
 	public function delUser($userid) {
 		return $this->db->delete('user', array('id' => $userid)); 
 	}

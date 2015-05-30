@@ -32,6 +32,9 @@
 	            <li>
 					<a href="<?php print site_url('welcome/kontakt'); ?>" data-ajax="false"><i class='fa fa-users'></i>Kontakt</a>
 	            </li>
+				<li>
+					<a href="<?php print site_url('welcome/impressum'); ?>" data-ajax="false"><i class='fa fa-legal'></i>Impressum</a>
+				</li>
 	            <li>
 					<a href="<?php print site_url('welcome/login'); ?>" data-ajax="false"><i class='fa fa-sign-in'></i>Login</a>
 	            </li>

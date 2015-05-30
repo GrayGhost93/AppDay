@@ -15,13 +15,12 @@
     <div data-role="content">
         <ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
             <?php
-            foreach ($campi as $r) {
-                print '<li>';
-                print '<a data-ajax="false" href="'.site_url('welcome/locationscampi').'?campus='.$r['campus'].'">';
-                print '<h2>'.$r['campus'].'</h2>';
-                print '<p><i class="fa fa-newspaper-o"></i>'.$r['anzahl'].'</p>';
-                print '</a>';
-                print '</li>';
+            foreach ($orte as $r) {
+                    print '<li>';
+                    print '<a data-ajax="false" href="'.site_url('welcome/locationsspecial').'/'.$r['id'].'">';
+                    print '<h2>'.$r['name'].'</h2>';
+                    print '<p><i class="fa fa-newspaper-o"></i>'.$r['beschreibung'].'</p>';
+                    print '</a>';
             }
             ?>
         </ul>
