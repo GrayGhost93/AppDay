@@ -12,23 +12,23 @@
             <ul>
                 <li data-role="fieldcontain">
                     <label for="inputDate">Eventname:</label>
-                    <input type="date" name="name" id="Eventname" value="" data-clear-btn="true" placeholder="Eventname ...">
+                    <input type="text" name="eventname" id="Eventname" value="" data-clear-btn="true" placeholder="Eventname ...">
                 </li>
                 <li data-role="fieldcontain">
                     <label for="inputDate">Beschreibung:</label>
-                    <input type="date" name="beschreibung" id="Beschreibung" value="" data-clear-btn="true" placeholder="Beschreibung ...">
+                    <input type="text" name="beschreibung" id="Beschreibung" value="" data-clear-btn="true" placeholder="Beschreibung ...">
                 </li>
                 <li data-role="fieldcontain">
                     <label for="inputDate">Datum:</label>
-                    <input type="date" name="datum" id="Datum" value="" data-clear-btn="true" placeholder="30.05.2015">
+                    <input type="date" name="tag" id="Datum" value="" data-clear-btn="true" placeholder="30.05.2015">
                 </li>
                 <li data-role="fieldcontain">
                     <label for="inputDate">Uhrzeit:</label>
-                    <input type="date" name="zeit" id="Zeit" value="" data-clear-btn="true" placeholder="13:37:00">
+                    <input type="time" name="uhrzeit" id="Zeit" value="" data-clear-btn="true" placeholder="13:37:00">
                 </li>
                 <li data-role="fieldcontain">
                     <label for="fieldcontain">Ort:</label>
-                    <select name="campus">
+                    <select name="ort">
                         <?php
                         foreach ($campus as $c) {
                             print '<option value="'.$c['campus'].'">';
@@ -41,12 +41,16 @@
             </ul>
             <input type="submit" name="submit" value="Anlegen" />
         </form><br><br>
-        <h3>Vorhandene Events bearbeiten:</h3><br>
+        <h3>Vorhandene Events bearbeiten</h3><br>
         <ul>
             <?php
             foreach ($events as $row){
+                //print_r($row);exit;
                 print '<li>';
-                print '<h2>'.$row['name'].'<a href="'.site_url('login/deleteNutzer').'/'.$row['id'].'" data-ajax="false"> <i class="fa fa-trash"></i></a></h2>';
+                print '<h2>'.$row['eventname'].
+                    '<a href="'.site_url('login/editEvent').'/'.$row['id'].'" data-ajax="false"> <i class="fa fa-pencil"></i></a>
+                    <a href="'.site_url('login/deleteEvent').'/'.$row['id'].'" data-ajax="false"> <i class="fa fa-trash"></i></a>
+                    </h2>';
                 print '</li>';
             }
             ?>
