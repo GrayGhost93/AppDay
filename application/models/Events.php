@@ -5,7 +5,7 @@ class Events extends CI_Model {
         return $this->db->insert('events', array('eventname' => $eventname, 'uhrzeit' => $zeit, 'beschreibung' => $beschreibung, 'ort' => $ort, 'tag' => $tag));
     }
     
-	public function delEvent($userid) {
+	public function delEvent($eventid) {
 		return $this->db->delete('events', array('id' => $eventid)); 
 	}
 	
